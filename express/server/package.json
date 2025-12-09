@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "dotenvx run -- nodemon ./src/app.js"
+  },
+  "packageManager": "pnpm@10.8.0",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.51.1",
+    "nodemon": "^3.1.11"
+  }
+}
