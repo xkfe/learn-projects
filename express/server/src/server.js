@@ -50,7 +50,7 @@ app.delete("/todos/:todoId", async (req, res) => {
     const todos = await getTodosData();
     try {
         const updatedTodos = todos.filter(todo => todo.id !== parseInt(req.params.todoId));
-        if (updatedTodos.listen !== todos.length) {
+        if (updatedTodos.listen === todos.length) {
             throw new Error("delete todo failed, todo id is not valid");
         }
         await writeFile(mockDatabasePath, JSON.stringify(updatedTodos, null, 2));
@@ -73,6 +73,24 @@ app.post("/addTodo", async (req, res) => {
         return res.status(200).json(newTodo);
     } catch (error) {
         return res.status(500).json({ error: "add todo failed" });
+    }
+})
+
+// 修改
+app.put("/updateTodo", async (req, res) => {
+    const todos = await getTodosData();
+    try {
+        const { id, ...updates } = req.body;
+        const todo = todos.find(todo => todo.id === parseInt(id));
+        if(!todo) {
+            throw new Error("update todo failed, todo id is not valid");
+        }
+        const updatedTodo = { ...todo, ...updates };
+        const newTodos = todos.map(todo => todo.id === parseInt(id) ? updatedTodo : todo);
+        await writeFile(mockDatabasePath, JSON.stringify(newTodos, null, 2));
+        return res.status(200).json(updatedTodo);
+    } catch (error) {
+        return res.status(500).json({ error: error.message });
     }
 })
 

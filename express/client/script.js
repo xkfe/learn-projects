@@ -28,7 +28,7 @@ class TodoApp {
                 {
                     id: this.generateId(),
                     title: '完成项目文档',
-                    description: '缂栧啓椤圭洰鐨勬妧鏈枃妗ｅ拰鐢ㄦ埛鎵嬪唽',
+                    description: '完成项目文档的编写',
                     priority: 'high',
                     dueDate: this.formatDate(new Date(Date.now() + 86400000)),
                     completed: false,
