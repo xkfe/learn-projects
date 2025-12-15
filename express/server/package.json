@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "dotenvx run -- nodemon ./src/server.js"
+    "dev": "dotenvx run -- nodemon ./src/app.js"
   },
   "packageManager": "pnpm@10.8.0",
   "dependencies": {
