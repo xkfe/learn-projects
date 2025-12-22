@@ -1,13 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
 
-<!DOCTYPE html><html lang="zh-CN"><head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shadcn Todos - 暗色系待办事项</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&amp;family=Noto+Serif+SC:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="styles.css"/>
-<!-- <script src="https://statics.moonshot.cn/sdk/preview-widgets.min.js" defer=""></script></head> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&amp;family=Noto+Serif+SC:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <script src="https://statics.moonshot.cn/sdk/preview-widgets.min.js" defer=""></script></head> -->
+
 <body>
     <!-- 背景容器 -->
     <div class="bg-container">
@@ -32,7 +37,9 @@
             <div class="header-actions">
                 <button class="theme-toggle" id="themeToggle">
                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                        </path>
                     </svg>
                 </button>
             </div>
@@ -47,9 +54,10 @@
                     <div class="search-box">
                         <div class="search-input-container">
                             <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                             </svg>
-                            <input type="text" class="search-input" placeholder="搜索任务..." id="searchInput"/>
+                            <input type="text" class="search-input" placeholder="搜索任务..." id="searchInput" />
                         </div>
                     </div>
 
@@ -77,17 +85,17 @@
                         <h3 class="filter-title">优先级</h3>
                         <div class="priority-options">
                             <label class="priority-option">
-                                <input type="checkbox" class="priority-checkbox" data-priority="high"/>
+                                <input type="checkbox" class="priority-checkbox" data-priority="high" />
                                 <span class="priority-indicator high"></span>
                                 <span class="priority-text">高优先级</span>
                             </label>
                             <label class="priority-option">
-                                <input type="checkbox" class="priority-checkbox" data-priority="medium"/>
+                                <input type="checkbox" class="priority-checkbox" data-priority="medium" />
                                 <span class="priority-indicator medium"></span>
                                 <span class="priority-text">中优先级</span>
                             </label>
                             <label class="priority-option">
-                                <input type="checkbox" class="priority-checkbox" data-priority="low"/>
+                                <input type="checkbox" class="priority-checkbox" data-priority="low" />
                                 <span class="priority-indicator low"></span>
                                 <span class="priority-text">低优先级</span>
                             </label>
@@ -121,7 +129,8 @@
                     <h2 class="section-title">我的任务</h2>
                     <button class="add-task-btn" id="addTaskBtn">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                         </svg>
                         <span>添加任务</span>
                     </button>
@@ -131,7 +140,9 @@
                 <div class="empty-state" id="emptyState">
                     <div class="empty-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
+                            </path>
                         </svg>
                     </div>
                     <h3 class="empty-title">暂无任务</h3>
@@ -153,14 +164,15 @@
                 <h3 class="modal-title" id="modalTitle">添加任务</h3>
                 <button class="modal-close" id="modalClose">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
                     </svg>
                 </button>
             </div>
             <form class="task-form" id="taskForm">
                 <div class="form-group">
                     <label class="form-label" for="taskTitle">任务标题 *</label>
-                    <input type="text" class="form-input" id="taskTitle" required=""/>
+                    <input type="text" class="form-input" id="taskTitle" required="" />
                     <div class="form-error" id="titleError"></div>
                 </div>
                 <div class="form-group">
@@ -178,7 +190,7 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="taskDueDate">截止日期</label>
-                        <input type="date" class="form-input" id="taskDueDate"/>
+                        <input type="date" class="form-input" id="taskDueDate" />
                     </div>
                 </div>
                 <div class="form-actions">
@@ -223,4 +235,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="script.js"></script>
 
-</body></html>
+</body>
+
+</html>
