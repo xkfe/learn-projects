@@ -15,7 +15,7 @@
     transition: all var(--transition-normal);
 }
 
-.modal-overlay.show {
+.modal.show {
     opacity: 1;
     visibility: visible;
 
@@ -43,4 +43,11 @@
     align-items: center;
     padding: var(--spacing-lg);
     border-bottom: 1px solid var(--border-color);
+}
+
+.model-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin: 0;
 }

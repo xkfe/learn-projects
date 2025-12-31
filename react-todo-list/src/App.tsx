@@ -1,14 +1,15 @@
 import LayoutHeader from '@/components/LayoutHeader/index'
 import LayoutAside from './components/LayoutAside'
 import Modal from './components/Modal'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 function App() {
   const [modelState, setModelState] = useState(false)
   const toggleModal = () => setModelState(!modelState)
-  useEffect(() => {
-    console.log('modelState', modelState)
-  }, [modelState])
+
+  function modalHeader() {
+    return <h1>标题</h1>
+  }
 
   return (
     <>
@@ -262,7 +263,7 @@ function App() {
           </section>
         </main>
       </div>
-      <Modal show={modelState}></Modal>
+      <Modal show={modelState} toggleModal={toggleModal} headerTitle='添加' headerSlot={<h2>这是头部</h2>}></Modal>
     </>
   )
 }
